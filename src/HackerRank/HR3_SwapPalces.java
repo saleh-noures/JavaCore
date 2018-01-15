@@ -8,22 +8,26 @@ public class HR3_SwapPalces
 	{
 
 		int [] arr = {2,-3,7,8,-9,4,1};
-		int x = 0;
-		int y = 0;
-		int arrLen = arr.length;
-		
-		for (int i = 0; i<=arrLen/2; i++)
+		int temp = 0;
+
+		for (int i = 0; i < arr.length/2; i++) // last Index  = 2
 		{
-			x = arr[i] * -1;
-			y = arr[arrLen - i - 1] * -1;
-			
-			arr[i] = y;
-			arr[arrLen - i - 1] = x;
+			temp = arr[arr.length - i -1] * -1;    // index = 3, temp = -9
+			arr[arr.length - i -1] = arr[i] * -1;
+			arr[i] = temp;
 		}
-		
-		for (int ele : arr)
+
+		/*If the length of the array is odd number, then the element in the middle won't changed
+		so do it manually */
+		if (arr.length%2 != 0)
 		{
-			System.out.print(ele  + " ");
+			arr[ Math.round(arr.length/2)] *= -1;
 		}
+
+		for (int ele: arr) {
+			System.out.print(ele + " ");
+		}
+
+
 	}
 }
