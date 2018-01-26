@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*https://www.hackerrank.com/challenges/divisible-sum-pairs/problem*/
 
-public class HR6_DivisibleSumPairs {
+public class HR6_DivisibleSumPairs_Implementation_Easy {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -2,6 +2,8 @@ package HackerRank;
 
 import java.util.*;
 
+/*https://www.hackerrank.com/faq*/
+
 public class HR5_SolveMeFirst {
 
 	static int addNumbers(int a, int b)
