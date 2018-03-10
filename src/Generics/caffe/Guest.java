@@ -1,4 +1,4 @@
-package Generics;
+package Generics.caffe;
 
 
 public class Guest {
@@ -7,7 +7,7 @@ public class Guest {
 
 		Tray tray = new Tray();
 
-		tray.addGlass(new Glass<Juice>());
+		tray.addGlass(new Glass<Water>());
 
 		tray.addGlassOfJuice(new Glass<AppleJuice>());
 

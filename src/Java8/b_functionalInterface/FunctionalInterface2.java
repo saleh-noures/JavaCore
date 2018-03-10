@@ -27,7 +27,7 @@ There are primitive specializations of the Consumer interface:
 Instances of functional interfaces can be created with lambda expressions, method references, or constructor references.
 */
 
-/*Consumer Interface Example - package-private scope*/
+/*Consumer Interface Example*/
 public class FunctionalInterface2 {
 
 	public static void main(String[] args)

@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiPredicate;
 
-
 /*
  * A method reference is the shorthand syntax for a lambda expression that executes just ONE method
  * It is a feature which is related to Lambda Expression. It allows us to reference constructors or
@@ -13,7 +12,7 @@ import java.util.function.BiPredicate;
  * a target type that consist of a compatible functional interface.
  *
  * Types of Method References
- * There are four types of method reference, the table below summarizes them.
+ * There are four types of method reference, the points below summarizes them.
  * 1. Reference to a static method ---> Class::staticMethodName (ContainingClass::staticMethodName)
  * 2. Reference to an instance method of a particular object                      ---> object::instanceMethodName (containingObject::instanceMethodName)
  * 3. Reference to an instance method of an arbitrary object of a particular type ---> Class::instanceMethodName (ContainingType::methodName)
@@ -28,8 +27,8 @@ import java.util.function.BiPredicate;
  * */
 
 /*Reference to a Static Method*/
-/*This example will iterate over an integer list and return
-a new list contains the numbers that if 10 is added to will be more than 50 */
+/* This example will iterate over an integer list and return
+a new list contains the numbers that are  N+N+10 >50 */
 
 /*
  * https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
@@ -38,7 +37,7 @@ public class MethodReferences1 {
 
 	public static void main (String [] args)
 	{
-		List<Integer> list = Arrays.asList(42,12,5,45,18, 41); // This is Auto-boxing  int to Integer
+		List<Integer> list = Arrays.asList(42,12,5,45,18, 41); // This is Auto-boxing int to Integer
 
 		System.out.println("===========Using Anynomous Inner Class=========");
 		// Using an anonymous class

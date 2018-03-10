@@ -14,12 +14,13 @@ package Java8.a_lambda;
  * Important Rules:
  *  1-You can not use Lambda Expressions or Method references without a functional interface
  *  2-The development process is, If the required Functional Interface exist use it, otherwise, create one, give it an implementation (LAMBDA *OR* METHOD REFERENCE) then use it!
- *  3-Instead of using AN ANONYMOUS CLASS you can use A LAMBDA EXPRESSION and if this just calls one method, you can use A METHOD REFERENCE
+ *  3-Instead of using AN ANONYMOUS CLASS you can use A LAMBDA EXPRESSION and if this just calls one method, you can use  METHOD REFERENCES or CONSTRUCTOR REFERENCES
  *  4-You can't mix Lambda with method references in the same expression 
  */
 
 /*https://www.youtube.com/watch?v=q5i_O4Uj_O8*/
 
+@FunctionalInterface
 interface Executable
 {
 	void execute();
@@ -38,11 +39,11 @@ public class Lambda1
 {
     public static void main(String args[])
     {
-        /*There many ways to pass the actual functionality of execute method in Executable interface
+        /*There are many ways to pass the actual functionality of execute method in Executable interface
          * 1- Creating a class that implements Executable then passing an object of that class to the run method
          * 2- Using Anonymous Inner Class
          * 3- Using Lambda expression - Java 8
-         * 4- Using method references
+         * 4- Using method references - Java 8
          */
 
         Runner runner = new Runner();

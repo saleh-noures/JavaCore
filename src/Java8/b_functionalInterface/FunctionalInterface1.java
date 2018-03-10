@@ -40,7 +40,7 @@ public class FunctionalInterface1 {
 	        	                                   return new Person("Saleh", 30, "Programmer");
 	                                          };
 	        Person p = supplier.get();
-	        System.out.println("Person Detail:\n" + p.getName() + ", " + p.getAge() + ", " + p.getAddress());
+	        System.out.println("Person Detail:\n" + p.getName() + ", " + p.getAge() + ", " + p.getPosition());
 	    }
 }
 
@@ -51,11 +51,11 @@ class Person
 	private int age;
 	private String address;
 
-    public Person(String name, int age, String address)
+    public Person(String name, int age, String position)
     {
         this.name = name;
         this.age = age;
-        this.address = address;
+        this.address = position;
     }
 
     public String getName()
@@ -68,7 +68,7 @@ class Person
         return age;
     }
 
-    public String getAddress()
+    public String getPosition()
     {
         return address;
     }

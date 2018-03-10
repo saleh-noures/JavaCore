@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 *	-Source: Stream takes Collections, Arrays, or I/O resources as input source.
 *	-Aggregate operations: Stream supports aggregate operations like filter, map, limit, skip, match, sorted, and so on
 *	-Pipelining: Most of the stream operations return stream itself so that their result can be pipelined. These operations are called intermediate operations
-*			     and their function is to take input, process them, and return output to the target. collect() method is a terminal operation which is normally
+*			     and their function is to take input, process them, and return output to the target. collect(),anyMatch()... methods are a terminal operation which is normally
 *			     present at the end of the pipelining operation to mark the end of the stream.
 *   -Automatic iterations: Stream operations do the iterations internally over the source elements provided, in contrast to Collections where explicit iteration is required.
 
@@ -29,9 +29,9 @@ import java.util.stream.Collectors;
 *     -stream(): Returns a sequential stream considering collection as its source.
 *     -parallelStream(): Returns a parallel Stream considering collection as its source. Parallel streams are capable of operating on multiple threads.
 
-* 1-forEach: Iterate each element of the stream and execute the "accept" method of the "Consumer" class
-* 2-map:lets you convert an object to something else or used to map each element to its corresponding result by executing the "apply" method of "Function" class
-* 3-filter: used to eliminate elements based on a criteria by excuting the "test" method of the "Predicate" class
+* 1-forEach: Iterate each element of the stream and execute the "accept" method of the "Consumer" interface
+* 2-map: lets you convert an object to something else or used to map each element to its corresponding result by executing the "apply" method of the "Function" interface
+* 3-filter: used to eliminate elements based on a criteria by excuting the "test" method of the "Predicate" interface
 * 4-collect: Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a List, Set or Map.
 *            Collect accepts a Collector which consists of four different operations: a supplier, an accumulator, a combiner and a finisher.
 *            More Details, read here http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
@@ -44,29 +44,28 @@ public class Streams1 {
 
 	public static void main(String[] args) {
 		
-		List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl", "axy");
+		List<String> stringList = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl", "axy");
 
-		List<Integer> ints = Arrays.asList(7,2,5,6,3);
+		List<Integer> integerList = Arrays.asList(7,2,5,6,3);
 
 		/****************stream().filter(Predicate predicate)******************/
 
-		Long count = strings.stream().filter(string -> string.isEmpty()).count();
-		System.out.println("The number of elements is: "+ count.longValue());
+		Long count = stringList.stream().filter(string -> string.isEmpty()).count();
+		System.out.println("The number of empty elements is: "+ count.longValue());
 
-		List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
-		System.out.println("Filtered List: " + filtered);
+		List<String> nonEmptyStringList = stringList.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+		System.out.println("Non Empty String List: " + nonEmptyStringList);
 
-		String mergedString = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(", "));
+		String mergedString = stringList.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(", "));
 		System.out.println("Merged String: " + mergedString);
-
 
 		/****************stream().map(Function mapper)******************/
 
-		List<String> mapToUpper = strings.stream().map(String::toUpperCase).collect(Collectors.toList());
+		List<String> mapToUpper = stringList.stream().map(String::toUpperCase).collect(Collectors.toList());
 		System.out.println("mapToUpper: "+ mapToUpper);
 
-		List<Integer> mapSquareInts = ints.stream().map((x)->x*x).collect(Collectors.toList());
-		System.out.println(mapSquareInts);
+		List<Integer> mapSquareIntegers = integerList.stream().map((x)->x*x).collect(Collectors.toList());
+		System.out.println(mapSquareIntegers);
 
 		List<Person> peopleList = Arrays.asList(new Person("Saleh", 38, "Seven Hills"), new Person("Omar", 5, "Bondi"), new Person("Adam", 1, "New Town"));
 

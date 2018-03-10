@@ -1,4 +1,4 @@
-package Generics;
+package Generics.caffe;
 
 /*
 ? means Anything (Type)
@@ -12,7 +12,6 @@ There are three types of wildcard usages
 
 public class Tray
 {
-
 	/*Unbounded WildCards*/
 	/*you can pass any type parameters E.g Object, String, ...*/
 	public void addGlass(Glass<?> g)
@@ -23,7 +22,7 @@ public class Tray
 	public void addGlassOfJuice(Glass<? extends Juice> g)
 	{
 	}
-	/*Upper bounded WildCards*/
+	/*Lower bounded WildCards*/
 	/*Any Super type of OrangeJuice, E.g. Juice and Liquid */
 	public void addGlassOfJuiceAndUppder(Glass<? super OrangeJuice> g)
 	{

@@ -1,4 +1,4 @@
-package Generics;
+package Generics.caffe;
 
 public class Glass<T> {
 
@@ -11,5 +11,5 @@ public class Glass<T> {
 	public void setT(T t) {
 		this.t = t;
 	}
-	
+
 }

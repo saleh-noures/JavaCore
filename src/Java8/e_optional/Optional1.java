@@ -12,38 +12,39 @@ import java.util.Optional;
 
 public class Optional1 {
 
-	public static void main(String args[]) {
+    public static void main(String args[]) {
 
-		  Optional1 optional1 = new Optional1();
-	      Integer value1 = null;
-	      Integer value2 = new Integer(10);
+        Integer value1 = null;
+        Integer value2 = new Integer(10);
 
-	      //Optional.ofNullable - allows passed parameter to be null.
-	      Optional<Integer> o1 = Optional.ofNullable(value1);
+        //Optional.ofNullable - allows passed parameter to be null.
+        Optional<Integer> o1 = Optional.ofNullable(value1);
 
-	      //Optional.of - throws NullPointerException if passed parameter is null
-	      Optional<Integer> o2 = Optional.of(value2);
+        //Optional.of - throws NullPointerException if passed parameter is null
+        Optional<Integer> o2 = Optional.of(value2);
 
-          ////Optional.ifPresent - If a value is present, invoke the specified consumer with the value, otherwise do nothing.
-	      o1.ifPresent((value)->System.out.println("Value from the Consumer of ifPresent: " + value));
-	      o2.ifPresent((value)->System.out.println("Value from the Consumer of ifPresent: " + value));
+        ////Optional.ifPresent - If a value is present, invoke the specified consumer with the value, otherwise do nothing.
+        o1.ifPresent((value) -> System.out.println("Value1 from the Consumer of ifPresent: " + value));
+        o2.ifPresent((value) -> System.out.println("Value2 from the Consumer of ifPresent: " + value));
 
-	      System.out.println(optional1.sum(o1,o2));
-	   }
+        Optional1 optional1 = new Optional1();
+        System.out.println(optional1.sum(o1, o2));
+    }
 
-	   public Integer sum(Optional<Integer> o1, Optional<Integer> o2) {
+    public Integer sum(Optional<Integer> o1, Optional<Integer> o2) {
 
-	      //Optional.isPresent - checks the value is present or not
-	      System.out.println("First parameter is present: " + o1.isPresent());
-	      System.out.println("Second parameter is present: " + o2.isPresent());
+        //Optional.isPresent - checks the value is present or not
+        System.out.println("First parameter is present: " + o1.isPresent());
+        System.out.println("Second parameter is present: " + o2.isPresent());
 
-	      //Optional.get - If a value is present in this Optional, returns the value, otherwise throws NoSuchElementException.
-	      Integer value2 = o2.get();
+        //Optional.orElse - returns the value if present otherwise returns the default value passed.
+        Integer value1 = o1.orElse(new Integer(0));
 
-	      //Optional.orElse - returns the value if present otherwise returns the default value passed.
-	      Integer value1 = o1.orElse(new Integer(0));
+        //Optional.get - If a value is present in this Optional, returns the value, otherwise throws NoSuchElementException.
+        Integer value2 = o2.get();
 
-	      return new Integer(value1.intValue() + value2.intValue());
 
-	   }
+        return new Integer(value1.intValue() + value2.intValue());
+
+    }
 }
