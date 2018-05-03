@@ -28,16 +28,18 @@ import java.util.stream.Collectors;
 *With Java 8, Collection interface has two methods to generate a Stream
 *     -stream(): Returns a sequential stream considering collection as its source.
 *     -parallelStream(): Returns a parallel Stream considering collection as its source. Parallel streams are capable of operating on multiple threads.
-
-* 1-forEach: Iterate each element of the stream and execute the "accept" method of the "Consumer" interface
-* 2-map: lets you convert an object to something else or used to map each element to its corresponding result by executing the "apply" method of the "Function" interface
-* 3-filter: used to eliminate elements based on a criteria by excuting the "test" method of the "Predicate" interface
-* 4-collect: Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a List, Set or Map.
+*
+* Operations (intermediate/terminal)
+* 1-filter(intermediate): used to eliminate elements based on a criteria by executing the "test" method of the "Predicate" interface
+* 2-map(intermediate): lets you convert an object to something else or used to map each element to its corresponding result by executing the "apply" method of the "Function" interface
+* 3-forEach(terminal): Iterate each element of the stream and execute the "accept" method of the "Consumer" interface
+* 4-collect(terminal): Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a List, Set or Map.
 *            Collect accepts a Collector which consists of four different operations: a supplier, an accumulator, a combiner and a finisher.
 *            More Details, read here http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
+* 5-min, max, sum, count(terminal): return min, max, sum and count
 *
-*https://www.tutorialspoint.com/java8/java8_streams.htm
-*
+*https://www.leveluplunch.com/java/examples/stream-terminal-operations-example/
+*https://www.leveluplunch.com/java/examples/stream-intermediate-operations-example/
 */
 
 public class Streams1 {
@@ -74,8 +76,6 @@ public class Streams1 {
 		System.out.println(peopleNamesList);
 
 		//List of objects -> List of other objects
-		//https://www.mkyong.com/java8/java-8-streams-map-examples/
-
 		List<Employee> empsList =  peopleList.parallelStream().map(p -> {
 		    Employee e = new Employee();
 		    e.setName(p.getName());

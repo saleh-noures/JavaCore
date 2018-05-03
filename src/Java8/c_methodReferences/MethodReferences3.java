@@ -20,7 +20,8 @@ interface TriFunction<T, U, V, R> {
 /* This Example will read two Strings convert them into numbers then return the sum of them */
 public class MethodReferences3 {
     public static void main(String[] args) {
-            Sum sum = new Sum();
+
+        Sum sum = new Sum();
 
         System.out.println("===========Using Anynomous Inner Class=========");
         TriFunction<Sum, String, String, Integer> triFunction1 = new TriFunction<Sum, String, String, Integer>() {

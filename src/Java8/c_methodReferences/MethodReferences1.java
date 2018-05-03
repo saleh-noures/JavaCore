@@ -27,8 +27,7 @@ import java.util.function.BiPredicate;
  * */
 
 /*Reference to a Static Method*/
-/* This example will iterate over an integer list and return
-a new list contains the numbers that are  N+N+10 >50 */
+/* This example will iterate over an integer list and return a new list contains the numbers that are  N+N+10 >50 */
 
 /*
  * https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
@@ -51,7 +50,7 @@ public class MethodReferences1 {
 		// Using a lambda expression
 		List<Integer> list2 = Numbers.findNumbers(list, (i1, i2) -> Numbers.isMoreThanFifty(i1, i2));
 		System.out.println(list2);
-		System.out.println("===========Using Methiod References================");
+		System.out.println("===========Using Method References================");
 		// Using a method reference
 		List<Integer> list3 = Numbers.findNumbers(list, Numbers::isMoreThanFifty);
 		System.out.println(list3);

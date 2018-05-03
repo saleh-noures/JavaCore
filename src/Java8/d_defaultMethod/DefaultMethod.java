@@ -16,6 +16,7 @@ package Java8.d_defaultMethod;
  * with no reference to a particular implementation's state.
  */
 
+@FunctionalInterface
 interface Executable {
     void execute();
     default void cancelExecute() {
@@ -26,15 +27,8 @@ interface Executable {
 /* https://dzone.com/articles/interface-default-methods-java */
 public class DefaultMethod {
     public static void main(String[] args) {
-        Command c = new Command();
-        c.execute();
-        c.cancelExecute();
-    }
-}
-
-class Command implements Executable {
-    @Override
-    public void execute() {
-        System.out.println("Command is executing ...");
+        Executable command = () -> System.out.println("Command is executing ...");
+        command.execute();
+        command.cancelExecute();
     }
 }

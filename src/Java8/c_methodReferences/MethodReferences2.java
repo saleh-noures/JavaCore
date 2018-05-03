@@ -12,9 +12,9 @@ interface NamesOperationsExecutable {
 /*Reference to an instance method of a particular object*/
 public class MethodReferences2 {
     public static void main(String[] args) {
+
         List<String> namesList = Arrays.asList("Saleh", "Omar", "Adam");
         NamesOperations namesOperations = new NamesOperations();
-
 
         System.out.println("===========Using Anynomous Inner Class=========");
         namesOperations.print(namesList, new NamesOperationsExecutable() {

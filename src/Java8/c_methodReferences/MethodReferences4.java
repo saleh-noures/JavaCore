@@ -62,18 +62,20 @@ public class MethodReferences4 {
 		 * 3-If the constructor takes two arguments, we use the BiFunction interface:
 		 **********************************************************************************************/
 		System.out.println("===========Using Anynomous Inner Class=========");
-		BiFunction<String ,Double, Employee> empFunc1 = new BiFunction<String ,Double, Employee>(){
+		BiFunction<String ,Double, Employee> empFactory1 = new BiFunction<String ,Double, Employee>(){
 			public Employee apply(String t, Double u) {
 				return new Employee(t,u);
 			}
 		};
-		Employee e1 = empFunc1.apply("Saleh", new Double(60000));
+		Employee e1 = empFactory1.apply("Saleh", new Double(60000));
+
 		System.out.println("===========Using a lambda expression=========");
-        BiFunction<String, Double, Employee> empFunc2 = (n,s)-> new Employee(n,s);
-        Employee e2 = empFunc2.apply("Omar", new Double(100000));
+        BiFunction<String, Double, Employee> empFactory2 = (n,s)-> new Employee(n,s);
+        Employee e2 = empFactory2.apply("Omar", new Double(100000));
+
 		System.out.println("===========Using Method References================");
-		BiFunction <String, Double, Employee> empFunc3 = Employee::new;
-		Employee e3 = empFunc3.apply("Adam", new Double(100000));
+		BiFunction <String, Double, Employee> empFactory3 = Employee::new;
+		Employee e3 = empFactory3.apply("Adam", new Double(100000));
 
 		/**********************************************************************************************
 		 * 4- If you have a constructor with three or more arguments,  you would have to create your own functional interface.

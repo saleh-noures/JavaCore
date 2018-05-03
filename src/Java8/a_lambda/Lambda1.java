@@ -13,7 +13,7 @@ package Java8.a_lambda;
 /*
  * Important Rules:
  *  1-You can not use Lambda Expressions or Method references without a functional interface
- *  2-The development process is, If the required Functional Interface exist use it, otherwise, create one, give it an implementation (LAMBDA *OR* METHOD REFERENCE) then use it!
+ *  2-The development process is, If the required Functional Interface already exists use it, otherwise, create one, give it an implementation (LAMBDA *OR* METHOD REFERENCE) then use it!
  *  3-Instead of using AN ANONYMOUS CLASS you can use A LAMBDA EXPRESSION and if this just calls one method, you can use  METHOD REFERENCES or CONSTRUCTOR REFERENCES
  *  4-You can't mix Lambda with method references in the same expression 
  */

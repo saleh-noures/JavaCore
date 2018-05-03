@@ -23,8 +23,7 @@ public class Streams3 {
                 .sorted()
                 .forEach(System.out::println);
 
-        strings
-                .stream()
+        strings.stream()
                 .findFirst() // This returns optional
                 .ifPresent(System.out::println);
 
@@ -44,7 +43,7 @@ public class Streams3 {
         }).sum();
         System.out.println("The Sum is " + sum);
 
-        System.out.println("****************Processing Order******************");
+        System.out.println("****************Elements Processing Order******************");
 
         System.out.println("-----------------First-----------------");
         /*Each element moves along the chain vertically. The first string "d2" passes filter then forEach, only then the second string "a2" is processed.*/
@@ -67,7 +66,7 @@ public class Streams3 {
                     return s.startsWith("A");
                 });
 
-        System.out.println("****************Why order matters******************");
+        System.out.println("****************Why operation order matters******************");
         System.out.println("-----------------First-----------------");
         /*In the next example Both map and filter will be called five times*/
         Stream.of("d2", "a2", "b1", "b3", "c")

@@ -5,10 +5,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /*
- * Other Stream Methods
- * 1-limit: returns a stream instance with the given number of element (from the start) in limit as an argument
- * 2-skip: returns a stream of remaining elements after skipping first n elements.
- * 3-sorted: using Natural Ordering, Comparator and Reverse Ordering
+ * Other Stream operations
+ * 1-limit(intermediate): returns a stream instance with the given number of element (from the start) in limit as an argument
+ * 2-skip(intermediate): returns a stream of remaining elements after skipping first n elements.
+ * 3-sorted(intermediate): using Natural Ordering, Comparator and Reverse Ordering
  *     1. sorted(): It sorts the elements of stream using natural ordering. The element class must implement Comparable interface.
  *     2. sorted(Comparator<? super T> comparator): Here we create an instance of Comparator using lambda expression. We can sort the stream elements in ascending and descending order.
  */
@@ -68,7 +68,6 @@ public class Streams2 {
         studentSet.stream().sorted(Comparator.comparing(Student::getAge).reversed()).forEach(s -> System.out.println("Id: " + s.getId() + ", Name: " + s.getName() + ", Age: " + s.getAge()));
 
         System.out.println("-------------Natural Sorting MAP-------------");
-
         Map<Integer, Student> studentMap = new HashMap<>();
         studentMap.put(1, new Student(2, "Omar", 5));
         studentMap.put(2, new Student(1, "Saleh", 38));

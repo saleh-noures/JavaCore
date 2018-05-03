@@ -36,10 +36,10 @@ As a general rule you have to use the existing functional interfaces, otherwise 
 public class FunctionalInterface1 {
 
 	 public static void main(String[] args) {
-	        Supplier<Person> supplier = () -> {
+	        Supplier<Person> personSupplier = () -> {
 	        	                                   return new Person("Saleh", 30, "Programmer");
 	                                          };
-	        Person p = supplier.get();
+	        Person p = personSupplier.get();
 	        System.out.println("Person Detail:\n" + p.getName() + ", " + p.getAge() + ", " + p.getPosition());
 	    }
 }
