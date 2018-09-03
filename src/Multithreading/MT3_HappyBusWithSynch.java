@@ -1,7 +1,7 @@
 package Multithreading; /*
   * 1- Code Synchronization helps in preventing threads working on the same code at the same time. The synchronization works based on the locking concept.
   * 2- Threads that work on the synchronized code should acquire the lock of the object or class file respectively.
-  * 3- Please remember an important point that there is only one lock per object or loaded class file.
+  * 3- Remember, there is only one lock per object or loaded class file.
   * 4- Synchronization can only be applied for method or block of code. But not for classes or variables.
   * 5- Very interesting! remove the synchronized form bookTickets method and see the result.
   * For more details see here : http://java9s.com/core-java/thread-safety-and-code-synchronization-in-java
@@ -9,7 +9,6 @@ package Multithreading; /*
 
 /**********************************HappyBus Class*******************************************/
 public class MT3_HappyBusWithSynch {
-
 	public static void main(String[] args)
 	{
 		BusReservation br = new BusReservation();
@@ -18,7 +17,6 @@ public class MT3_HappyBusWithSynch {
 		pt1.start();
 		pt2.start();
 	}
-
 }
 
 /**********************************PassengerThread Class************************************/
@@ -54,16 +52,14 @@ class BusReservation implements Runnable{
 		}
 	}
 
-  public synchronized boolean bookTickets(int seats, String name){
+  public  boolean bookTickets(int seats,String name){
 
-	  System.out.println("Welcome to HappyBus "+Thread.currentThread().getName()+" Number of Tickets Available are:"+this.getTotalSeatsAvailable());
+	  System.out.println("Welcome to HappyBus " + name + " Number of Tickets Available are:"+this.getTotalSeatsAvailable());
 
 		if (seats>this.getTotalSeatsAvailable()) {
 			return false;
 		} else {
-
 			totalSeatsAvailable = totalSeatsAvailable-seats;
-
 			return true;
 		}
 	}

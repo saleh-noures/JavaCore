@@ -52,8 +52,8 @@ public class mainClass_Set {
 		printSet(boxTreeSetUsingComparator);
 
 
-		System.out.println("\nCheck containsAll (uses equal & hashCode methods): "+boxLinkedHashSet.containsAll(boxHashSet));
-		System.out.println("Check contains (uses equal & hashCode methods): "+boxHashSet.contains(new Box<>(1,"Box1")));
+		System.out.println("\nCheck containsAll (uses equal & hashCode methods): " + boxLinkedHashSet.containsAll(boxHashSet));
+		System.out.println("Check contains (uses equal & hashCode methods): " + boxHashSet.contains(new Box<>(1,"Box1")));
 	}
 
 	public static void populateSet(Set<Box<Integer,String>> boxSet)

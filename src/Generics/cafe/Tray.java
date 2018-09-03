@@ -1,4 +1,4 @@
-package Generics.caffe;
+package Generics.cafe;
 
 /*
 ? means Anything (Type)

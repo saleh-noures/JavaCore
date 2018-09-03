@@ -1,4 +1,4 @@
-package Generics.caffe;
+package Generics.cafe;
 
 public class Glass<T> {
 

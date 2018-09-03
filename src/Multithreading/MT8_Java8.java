@@ -1,12 +1,14 @@
 package Multithreading;
 
-public class MT7_Java8 {
+public class MT8_Java8 {
 	
      static int	counter = 1;
      
 	 public static void main(String[] args)
 	 {
-		 // Notice that we create two runnable objects using Lambda 
+		 // Notice that we create two runnable objects using Lambda
+		 // Also notice how Lambda can access methods of the enclosing scope
+         // as it does not have it's own scope
 		 Runnable r1 = () -> {System.out.println("The Id of r1 is: "+ getId());};
 		 Runnable r2 = () -> {System.out.println("The Id of r2 is: "+ getId());};
 		 

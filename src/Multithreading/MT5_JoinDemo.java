@@ -1,4 +1,5 @@
-package Multithreading;/*
+package Multithreading;
+/*
  * 1- Join is used in the situations when a task which should be completed before the current task is going to finish.
  * 2- Join method belongs to Thread object and not a static member. When join is invoked on a thread instance, this thread
  *    will tell currently executing thread to wait till the Joining thread completes.
@@ -20,17 +21,15 @@ public class MT5_JoinDemo {
 		 secondThread = new Thread(jr, "Second Thread");
 		 firstThread.start();
 
-		 while(true)
+		 State firstThreadStatus;
+		 State secondThreadStatus;
+		 do
 		 {
-			 State firstThreadStatus = firstThread.getState();
-			 State secondThreadStatus = secondThread.getState();
+		     firstThreadStatus = firstThread.getState();
+		     secondThreadStatus = secondThread.getState();
 			 System.out.println(System.nanoTime()+" First Thread status:"+firstThreadStatus);
 			 System.out.println(System.nanoTime()+" Second Thread Status :"+secondThreadStatus);
-			 if(firstThreadStatus.equals(State.TERMINATED) && secondThreadStatus.equals(State.TERMINATED))
-			 {
-			     break;
-			 }
-		 }
+		 } while(firstThreadStatus.equals(State.TERMINATED) && secondThreadStatus.equals(State.TERMINATED));
 	 }
 
 }
@@ -40,7 +39,7 @@ class JoinRunnable implements Runnable {
 @Override
  public void run()
 {
-	 System.out.println(System.nanoTime()+" Current Thread:"+Thread.currentThread().getName()+" is at the beginning");
+	 System.out.println(System.nanoTime()+" Current Thread:" + Thread.currentThread().getName() + " is at the beginning");
 
 	 if(Thread.currentThread().getName().equals("First Thread"))
 	 {
@@ -55,8 +54,7 @@ class JoinRunnable implements Runnable {
 			 e.printStackTrace();
 		 }
 	 }
-
-	 System.out.println(System.nanoTime()+" Current Thread:"+Thread.currentThread().getName()+" is at the end");
+	 System.out.println(System.nanoTime() + " Current Thread:"+Thread.currentThread().getName() + " is at the end");
  }
 
 }

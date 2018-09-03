@@ -1,8 +1,9 @@
 package Multithreading;/*
  * 1- A value stored in a ThreadLocal instance is specific (local) to the current running thread and any other code logic running on the same
- *    thread will see the same value, but not the values set on the same instance by other threads. (There are exceptions, like InheritableThreadLocal, which inherits its parent thread�s values by default.)
- * 2- ThreadLocal can be considered as a scope of access, like a request scope or session scope. It�s a thread scope
- * 3- One possible (and common) use is when you have an object that is not thread-safe, but you want to avoid synchronizing access to that object. Instead, give each thread its own instance of the object.
+ *    thread will see the same value, but not the values set on the same instance by other threads. (There are exceptions, like InheritableThreadLocal, which inherits its parent threads values by default.)
+ * 2- ThreadLocal can be considered as a scope of access, like a request scope or session scope. It's a thread scope
+ * 3- One possible (and common) use is when you have an object that is not thread-safe, but you want to avoid synchronizing access to that object.
+ *    Instead, give each thread its own instance of the object.
  * 4- The value object put into the ThreadLocal would not purge itself (garbage collected) if there are no more strong references to it
  *    and Java garbage collection would clean up the ThreadLocal map if the thread itself is not strongly referenced elsewhere.
  *    So now the question is: when would the thread object get garbage collected. The answer is: it depends, but always assume the thread is long-running.
@@ -17,7 +18,7 @@ package Multithreading;/*
  *  To solve that, you can use Thread Local. You can generate a transaction id (either in the servlet or better still in a filter) and set it in the Thread Local.
  *  After this, what ever the business method, that this servlet calls, can access the transaction id from the thread local.
  *  This servlet might be servicing more that one request at a time. Since each request is processed in separate thread, the transaction id will be unique to each
- *  thread (local) and will be accessible from all over the thread�s execution (global).
+ *  thread (local) and will be accessible from all over the threads execution (global).
  * */
 
 class Context{
@@ -101,12 +102,12 @@ class TransactionService{
 
 	public void CommitTrans()
 	{
-        System.out.println("TransID: "+ ThreadLocalContextManager.getThreadLocalContext().getTransId() + " For "+ Thread.currentThread().getName() +" Has Been Commited");
+        System.out.println( Thread.currentThread().getName() + " ,TransID: "+ ThreadLocalContextManager.getThreadLocalContext().getTransId() +" Has Been Commited");
 	}
 
 	public void RollbackTrans()
 	{
-		System.out.println("TransID: "+ ThreadLocalContextManager.getThreadLocalContext().getTransId() +" For "+ Thread.currentThread().getName() +" Has Been RolledBack");
+		System.out.println( Thread.currentThread().getName() + " ,TransID: "+ ThreadLocalContextManager.getThreadLocalContext().getTransId() +" Has Been RolledBack");
 	}
 
 }

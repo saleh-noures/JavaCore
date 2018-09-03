@@ -6,6 +6,7 @@ public class Box<S  extends Comparable<S>, T> implements Comparable<Box<S,T>> { 
 	private T desc;
 
 
+
 	public S getIndex() {
 		return Index;
 	}
@@ -47,7 +48,7 @@ public class Box<S  extends Comparable<S>, T> implements Comparable<Box<S,T>> { 
 	}
 
 	/*
-	 * Why always override hashcode() if overriding equals()?
+	 * Why always override hashcode() if overriding equals()? (This is done for compatibility with hashbased collections such as HashMap() and HashSet().)
 
 	In Java, every object has access to the equals() method because it is inherited from the Object class.
 	However, this default implementation just simply compares the memory addresses of the objects. You can override the default implementation of the equals() method defined in java.lang.Object.

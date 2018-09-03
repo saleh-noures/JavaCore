@@ -9,12 +9,14 @@ public class mainClass_Map {
 
 	public static void main(String[] args) {
 
+		System.out.println("Using HashMap .....");
 		Map<String, Box<Integer,String>> boxHashMap =  new HashMap<>();
 		System.out.println("Populating ('b1',(1,Box1)) ('b2',(2,Box2)) ('b3',(3,Box3)) ('b3',(3,Box3)) ('b4',(3,Box3)) (null,(4,Box4)) ('b5',(null)) ('b6',(6,Box6))  .....");
 		populateMap(boxHashMap);
 		System.out.println("Printing boxHashMap .....");
 		printMap(boxHashMap);
-		
+
+        System.out.println("\nUsing LinkedHashMap .....");
 		Map<String, Box<Integer,String>> linkedHashMap =  new LinkedHashMap<>();
 		System.out.println("Populating ('b1',(1,Box1)) ('b2',(2,Box2)) ('b3',(3,Box3)) ('b3',(3,Box3)) ('b4',(3,Box3)) (null,(4,Box4)) ('b5',(null)) ('b6',(6,Box6))  .....");
 		populateMap(linkedHashMap);

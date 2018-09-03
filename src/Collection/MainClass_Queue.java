@@ -15,7 +15,7 @@ public class MainClass_Queue {
 	public static void main(String[] args) {
 
 		Queue<Box<Integer,String>> boxQueue = new PriorityQueue<Box<Integer,String>>();
-
+		System.out.println("Populating (1,Box1)(2,Box2)(3,Box3)(3,Box3) (3,Box3) (5,Box5)(4,Box4)  .....");
 		populateQueue(boxQueue);
 
 		System.out.println("Printing boxQueue .....");
@@ -23,6 +23,7 @@ public class MainClass_Queue {
 
 		boxQueue.remove();
 		boxQueue.remove();
+		boxQueue.add(new Box<>(6,"Box6"));
 
 		System.out.println("Printing boxQueue after removing two Elements .....");
 		printQueue(boxQueue);
