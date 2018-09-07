@@ -39,6 +39,9 @@ public class FunctionalInterface1 {
 	        Supplier<Person> personSupplier = () -> {
 	        	                                   return new Person("Saleh", 30, "Programmer");
 	                                          };
+	        // Or like this:
+            //Supplier<Person> personSupplier = () -> new Person("Saleh", 30, "Programmer");
+
 	        Person p = personSupplier.get();
 	        System.out.println("Person Detail:\n" + p.getName() + ", " + p.getAge() + ", " + p.getPosition());
 	    }

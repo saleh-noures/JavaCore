@@ -35,7 +35,7 @@ public class Streams3 {
         //Here's a combined example: the stream of doubles is first mapped to an int stream and than mapped to an object stream of strings:
         Stream.of(1.0, 2.0, 3.0)
                 .mapToInt(Double::intValue)
-                .mapToObj(i -> "a" + i)
+                .mapToObj(i -> "b" + i)
                 .forEach(System.out::println);
 
         int sum = Stream.of("2", "2", "3", "3", "5").mapToInt(e->{

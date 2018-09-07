@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * architecture without the need to write any specific code for it.
 
 ****What is Stream?****
-*Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the characteristics of a Stream:
+*Stream represents a sequence of objects from a source(Collections, Arrays, or I/O resources), which supports aggregate operations. Following are the characteristics of a Stream:
 *   -Sequence of elements: A stream provides a set of elements of specific type in a sequential manner. A stream gets/computes elements on demand. It never stores the elements.
 *	-Source: Stream takes Collections, Arrays, or I/O resources as input source.
 *	-Aggregate operations: Stream supports aggregate operations like filter, map, limit, skip, match, sorted, and so on
@@ -80,11 +80,13 @@ public class Streams1 {
 		    Employee e = new Employee();
 		    e.setName(p.getName());
 		    e.setAddress(p.getAddress());
+		    e.setSalary(10000);
+
 			return e;
 		}).collect(Collectors.toList());
 
 		/****************stream().forEach(Consumer consumer)******************/
-		empsList.stream().forEach(e -> System.out.println("Name: " + e.getName()+" Address: "+ e.getAddress()));
+		empsList.stream().forEach(e -> System.out.println("Name: " + e.getName()+ " Salary: " + e.getSalary() +" Address: "+ e.getAddress()));
 	}
 }
 
@@ -128,7 +130,8 @@ class Employee
 
     }
 
-	public Employee(String name, String address, int salary)
+
+    public Employee(String name, String address, int salary)
     {
         this.name = name;
         this.address = address;
@@ -154,6 +157,8 @@ class Employee
     {
         this.address = address;
     }
+
+    public void setSalary(int salary) { this.salary = salary; }
 
     public int getSalary()
     {

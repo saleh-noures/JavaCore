@@ -23,7 +23,7 @@ public class Lambda3 {
 
 
      /*1-The below Lambda can be declared as (a) as Java 8 can infer the type
-      *  or just a without bracket if you have one parameter only.
+      *  or just "a" without bracket if you have one parameter only.
       *2-To pass more than one parameter you can do this (a,b)
       *3-It is important to note that in some cases you need to explicitly
       *  mention the type to avoid method call ambiguity.

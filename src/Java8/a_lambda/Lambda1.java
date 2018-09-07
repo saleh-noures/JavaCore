@@ -23,7 +23,7 @@ package Java8.a_lambda;
 @FunctionalInterface
 interface Executable
 {
-	void execute();
+	void execute(); // Interfaces are "public abstract" by default
 }
 
 class Runner

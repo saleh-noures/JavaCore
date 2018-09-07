@@ -52,6 +52,7 @@ public class MethodReferences1 {
 		System.out.println(list2);
 		System.out.println("===========Using Method References================");
 		// Using a method reference
+		// Arguments will be passed automatically from
 		List<Integer> list3 = Numbers.findNumbers(list, Numbers::isMoreThanFifty);
 		System.out.println(list3);
 
@@ -59,7 +60,7 @@ public class MethodReferences1 {
 }
 
 class Numbers
-{
+{   //This method will be used as a static method reference.
 	public static boolean isMoreThanFifty(int n1, int n2)
 	{
 		return (n1 + n2) > 50;

@@ -17,7 +17,7 @@ interface TriFunction<T, U, V, R> {
     R apply(T t, U u, V v);
 }
 
-/* This Example will read two Strings convert them into numbers then return the sum of them */
+/* This Example will read two Strings convert them into numbers then returns the sum of them */
 public class MethodReferences3 {
     public static void main(String[] args) {
 

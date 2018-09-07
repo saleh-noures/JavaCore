@@ -19,6 +19,7 @@ package Java8.d_defaultMethod;
 @FunctionalInterface
 interface Executable {
     void execute();
+
     default void cancelExecute() {
         System.out.println("Execution has been canceled");
     }

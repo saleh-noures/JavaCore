@@ -38,7 +38,7 @@ public class Optional1 {
         System.out.println("Second parameter is present: " + o2.isPresent());
 
         //Optional.orElse - returns the value if present otherwise returns the default value passed.
-        Integer value1 = o1.orElse(new Integer(0));
+        Integer value1 = o1.orElse(new Integer(1));
 
         //Optional.get - If a value is present in this Optional, returns the value, otherwise throws NoSuchElementException.
         Integer value2 = o2.get();
