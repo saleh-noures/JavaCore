@@ -12,7 +12,8 @@ package Multithreading;
  * 7- Thread scheduler in the JVM negotiate threads execution with the CPU and nothing can be guarantee about which thread should be executed at a particular point of time.
  * 8- By default threads share same objects (Not Sure!! but probably this is true with Runnable objects and false when overriding the run method in Thread class )
  *    This Example From http://java9s.com/?s=Multithreading
-*/
+ * 9- Have a look at the difference between Callable and Runnable classes
+ */
 // **************This example execute two threads form the same class*************
 public class MT1_RaceDemo
 	{
@@ -38,9 +39,9 @@ class Racer implements Runnable {
 		{
 			for(int distance=1;distance<=1000;distance++)
 			{
-				System.out.println("Distance Covered by "+Thread.currentThread().getName()+ " is: "+distance +"meters");
+				System.out.println("Distance Covered by " + Thread.currentThread().getName()+ " is: " + distance + "meters");
 				
-			  // Interesting, uncomment to so how one excption in one thread does not affect the other. 	
+			  // Interesting, uncomment to so how one exception in one thread does not affect the other.
               /*if (Thread.currentThread().getName().equalsIgnoreCase("Hare") && distance == 700 )
 				{
 					throw new RuntimeException("Hare is Tired");
