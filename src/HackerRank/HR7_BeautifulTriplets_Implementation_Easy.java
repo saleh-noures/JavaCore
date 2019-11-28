@@ -5,38 +5,47 @@ import java.util.Scanner;
 public class HR7_BeautifulTriplets_Implementation_Easy {
 
 	//https://www.hackerrank.com/challenges/beautiful-triplets
+    // for better solution, See page 67 in cracking the coding interview - bottlenecks.
+    public static void main(String[] args) {
 
-	static int beautifulTriplets(int d, int[] arr) {
-		int count = 0;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter n and d");
+        int n = in.nextInt();
+        int d = in.nextInt();
 
-		for (int i = 0; i < arr.length - 2; i++)
-		{
-			for (int j = i+1; j < arr.length - 1; j++)
-			{
-				if (arr[j]-arr[i] == d)
-				{
-					for (int k = j+1; k < arr.length; k++) {
-						if (arr[k]-arr[j] == d)
-						{
-							count++;
-						}
-					}
-				}
-			}
-		}
-		return count;
-	}
+        int [] arr = new int [n];
+        System.out.println("Enter "+ n +" Integer numbers");
 
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
-		int d = in.nextInt();
-		int[] arr = new int[n];
-		for(int arr_i = 0; arr_i < n; arr_i++){
-			arr[arr_i] = in.nextInt();
-		}
-		int result = beautifulTriplets(d, arr);
-		System.out.println(result);
-		in.close();
-	}
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = in.nextInt();
+        }
+        System.out.println(beautifulTriplets(d, arr));
+
+        in.close();
+    }
+
+    static int beautifulTriplets(int d, int[] arr) {
+        int beautifulTripletsCount = 0;
+        for (int i = 0; i < arr.length - 2 ; i++) {
+            for (int j = i+1; j < arr.length -1; j++) {
+                /*
+                 This is brute force solution (will enumerate all combinations),
+                 so for performance reasons check if arr[j]-arr[i] ==d as it
+                 will reduce the combinations to a third
+                */
+                if(arr[j]-arr[i] ==d){
+                    for (int k = j+1; k < arr.length; k++) {
+                        //System.out.println(arr[i]+" "+ arr[j]+" "+arr[k]);
+                        if ( arr[k]-arr[j] == d)
+                        {
+                            beautifulTripletsCount++;
+                        }
+                    }
+
+                }
+            }
+        }
+        return beautifulTripletsCount;
+    }
+
 }

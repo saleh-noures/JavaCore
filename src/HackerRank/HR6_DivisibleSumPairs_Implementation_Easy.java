@@ -7,34 +7,36 @@ import java.util.Scanner;
 public class HR6_DivisibleSumPairs_Implementation_Easy {
 
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
+
+        System.out.println(" Enter 'n' then 'k'");
         int n = in.nextInt();
         int k = in.nextInt();
-        int[] ar = new int[n];
 
-        for (int ar_i = 0; ar_i < n; ar_i++) {
-
-            ar[ar_i] = in.nextInt();
-
+        int [] arr = new int[n];
+        System.out.println("Enter arr of " + n + " elements");
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
         }
 
-        int result = divisibleSumPairs(n, k, ar);
-        System.out.println(result);
+        System.out.println(getDivisibleSumPair(n, k, arr));
 
+        in.close();
     }
 
-    private static int divisibleSumPairs(int n, int k, int[] arr) {
-        int count = 0;
+    public static int getDivisibleSumPair(int n, int k, int [] arr) {
 
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if ((arr[i] + arr[j]) % k == 0) {
-                    count++;
+        int DivisibleSumPair = 0;
+        for (int i = 0; i < n -1 ; i++) {
+            for (int j = i+1; j <n ; j++) {
+                if ((arr[i] + arr[j])%k == 0 )
+                {
+                    DivisibleSumPair++;
                 }
             }
         }
-
-        return count;
+        return DivisibleSumPair;
 
     }
 

@@ -27,5 +27,7 @@ public class HR5_SolveMeFirst {
 		name = in.next();
 		
 		System.out.println("Hi "+ name + " The Sum is: " + addNumbers(a,b));
+
+		in.close();
 	}
 }

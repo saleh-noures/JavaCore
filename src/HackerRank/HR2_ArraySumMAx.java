@@ -10,7 +10,7 @@ public class HR2_ArraySumMAx {
 		int sum = 0;
 		int max = 0;
 
-		for (int i = 0 ; i <= arr.length-pSize ; i++)
+		for (int i = 0 ; i <= arr.length - pSize ; i++)
 		{
 			for (int j = i ; j<i+pSize ; j++)
 			{
