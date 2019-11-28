@@ -1,4 +1,4 @@
-package algorithms.Recursion;
+package algorithms.recursion;
 
 /*EG. 4! = 1*2*3*4 */
 public class FactorialsRecursion {

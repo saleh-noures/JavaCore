@@ -1,4 +1,4 @@
-package algorithms.Recursion;
+package algorithms.recursion;
 
 /*
 

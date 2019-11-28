@@ -1,4 +1,4 @@
-package algorithms.Greedy;
+package algorithms.greedy;
 /*
  Kruskal’s Algorithm for Minimum Spanning Tree
  Spanning Tree:

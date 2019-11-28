@@ -1,4 +1,4 @@
-package algorithms.tree;
+package algorithms.binarySearchTree;
 
 /*
 In a normal tree, every node can have any number of children.

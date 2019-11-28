@@ -1,4 +1,4 @@
-package algorithms.tree;
+package algorithms.binarySearchTree;
 
 // This ia a binary tree
 /*

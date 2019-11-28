@@ -23,12 +23,14 @@ public class Main {
 
 		//Create the graph, add nodes, create edges between nodes
 		Graph g=new Graph();
+
 		g.addNode(nA);
 		g.addNode(nB);
 		g.addNode(nC);
 		g.addNode(nD);
 		g.addNode(nE);
 		g.addNode(nF);
+
 		g.setRootNode(nA);
 		
 		g.connectNode(nA,nB);

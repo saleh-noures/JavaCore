@@ -7,6 +7,7 @@ import java.util.Stack;
 
 
 public class Graph {
+
     public Node rootNode;
     public ArrayList<Node> nodes = new ArrayList();
     public int[][] adjMatrix;//Edges will be represented as adjacency Matrix
