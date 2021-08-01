@@ -17,7 +17,7 @@ package Multithreading;/*
  *  One solution would be passing this transaction id as a parameter to all the business methods. But this is not a good solution as the code is redundant and unnecessary.
  *  To solve that, you can use Thread Local. You can generate a transaction id (either in the servlet or better still in a filter) and set it in the Thread Local.
  *  After this, what ever the business method, that this servlet calls, can access the transaction id from the thread local.
- *  This servlet might be servicing more that one request at a time. Since each request is processed in separate thread, the transaction id will be unique to each
+ *  This servlet might be servicing more than one request at a time. Since each request is processed in separate thread, the transaction id will be unique to each
  *  thread (local) and will be accessible from all over the threads execution (global).
  * */
 
@@ -102,7 +102,7 @@ class TransactionService{
 
 	public void CommitTrans()
 	{
-        System.out.println( Thread.currentThread().getName() + " ,TransID: "+ ThreadLocalContextManager.getThreadLocalContext().getTransId() +" Has Been Commited");
+        System.out.println( Thread.currentThread().getName() + " ,TransID: "+ ThreadLocalContextManager.getThreadLocalContext().getTransId() +" Has Been Committed");
 	}
 
 	public void RollbackTrans()

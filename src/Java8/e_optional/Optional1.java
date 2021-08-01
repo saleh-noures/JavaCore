@@ -15,7 +15,7 @@ public class Optional1 {
     public static void main(String args[]) {
 
         Integer value1 = null;
-        Integer value2 = new Integer(10);
+        Integer value2 = 10;
 
         //Optional.ofNullable - allows passed parameter to be null.
         Optional<Integer> o1 = Optional.ofNullable(value1);
@@ -38,13 +38,13 @@ public class Optional1 {
         System.out.println("Second parameter is present: " + o2.isPresent());
 
         //Optional.orElse - returns the value if present otherwise returns the default value passed.
-        Integer value1 = o1.orElse(new Integer(1));
+        Integer value1 = o1.orElse(1);
 
         //Optional.get - If a value is present in this Optional, returns the value, otherwise throws NoSuchElementException.
         Integer value2 = o2.get();
 
 
-        return new Integer(value1.intValue() + value2.intValue());
+        return value1.intValue() + value2.intValue();
 
     }
 }

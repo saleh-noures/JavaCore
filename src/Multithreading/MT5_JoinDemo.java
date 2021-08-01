@@ -29,7 +29,7 @@ public class MT5_JoinDemo {
 		     secondThreadStatus = secondThread.getState();
 			 System.out.println(System.nanoTime()+" First Thread status:"+firstThreadStatus);
 			 System.out.println(System.nanoTime()+" Second Thread Status :"+secondThreadStatus);
-		 } while(firstThreadStatus.equals(State.TERMINATED) && secondThreadStatus.equals(State.TERMINATED));
+		 } while(!firstThreadStatus.equals(State.TERMINATED) && !secondThreadStatus.equals(State.TERMINATED));
 	 }
 
 }

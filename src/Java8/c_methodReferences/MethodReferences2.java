@@ -47,11 +47,11 @@ class NamesOperations {
     }
 
     public List<String> toLowerCaseText(List<String> list) {
-        List<String> UpperCaseList = new ArrayList<>();
+        List<String> lowerCaseList = new ArrayList<>();
         for (String name : list) {
-            UpperCaseList.add(name.toLowerCase());
+            lowerCaseList.add(name.toLowerCase());
         }
-        return UpperCaseList;
+        return lowerCaseList;
     }
 }
 

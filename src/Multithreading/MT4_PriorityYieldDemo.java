@@ -75,6 +75,7 @@ public class MT4_PriorityYieldDemo {
             System.out.println(System.nanoTime() + " t7 Status:" + t7State);
             System.out.println(System.nanoTime() + " t8 Status:" + t8State);
             System.out.println(System.nanoTime() + " t9 Status:" + t9State);
+
         }while (allThreads.activeCount()>0);
 
     }

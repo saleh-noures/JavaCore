@@ -39,7 +39,7 @@ class B implements Runnable {
         a.count();
         a.count();
         a.count();
-        System.out.println("Counter From " + Thread.currentThread().getName() + ":" + a.getCounter());
+        System.out.println("Counter From " + Thread.currentThread().getName() + ": " + a.getCounter());
     }
 }
 
@@ -47,6 +47,6 @@ class C implements Runnable {
     A a ;
     public void run() {
     a= new A();
-        System.out.println("Counter From " + Thread.currentThread().getName() + ":" + a.getCounter());
+        System.out.println("Counter From " + Thread.currentThread().getName() + ": " + a.getCounter());
     }
 }

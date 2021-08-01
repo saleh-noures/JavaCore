@@ -13,12 +13,12 @@ import java.util.function.Consumer;
  * execute accept method against each element in the list
  *
  * 2-Collections.sort is a static method that accepts two
- * parameters List and Comparator objects
+ * parameters, List and Comparator objects
  */
 public class FunctionalInterface3 {
     public static void main(String[] args) {
 
-        List<Person> peopleList = Arrays.asList(new Person("Saleh", 30, "Programmer"), new Person("Omar", 5, "CEO"), new Person("Adam", 1, "CEO"));
+        List<Person> peopleList = Arrays.asList(new Person("Saleh", 41, "Team Lead"), new Person("Omar", 5, "CEO"), new Person("Adam", 1, "CEO"));
 
         System.out.println("===========Using Implementation class=========");
         ConsumerImpl cons0 = new ConsumerImpl();

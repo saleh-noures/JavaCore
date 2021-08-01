@@ -46,6 +46,6 @@ public class MethodReferences3 {
 
 class Sum {
     public Integer doSum(String x, String y) {
-        return new Integer(x) + new Integer(y);
+        return Integer.valueOf(x) + Integer.valueOf(y);
     }
 }

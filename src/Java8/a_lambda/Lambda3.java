@@ -30,8 +30,8 @@ public class Lambda3 {
       *4-Lambda does not have its own scope but it uses the same scope of the method
       *  where it's declared. Other words if you declare a variable in lambda expression
       *  with the same name as another variable in the method where a the lambda is declared
-      *  that would be a syntax error. try!
-      *5-you can use a variable form outside lambda only if it's final or effectively final,
+      *  that will be a syntax error. try!
+      *5-You can use a variable form outside lambda only if it's final or effectively final,
       *  meaning you can declare the variable without using a final keyword
       *  but you can't change it later */
 

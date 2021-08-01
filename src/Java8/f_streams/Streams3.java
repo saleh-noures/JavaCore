@@ -1,6 +1,7 @@
 package Java8.f_streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.function.Supplier;
@@ -102,6 +103,7 @@ public class Streams3 {
 
         stream.anyMatch(s -> true);    // ok
         //stream.noneMatch(s -> true);   // exception: stream has already been operated upon or closed
+
         System.out.println("-----------------Second-----------------");
         /*To overcome this limitation we have to create a new stream chain for every terminal operation we want to execute,
          * e.g. we could create a stream supplier to construct a new stream with all intermediate operations already set up:*/
@@ -152,6 +154,10 @@ public class Streams3 {
         System.out.println("****************CPU Cores******************");
         int cores = Runtime.getRuntime().availableProcessors();
         System.out.println("Number or CPU cores are " + cores);
+
+
+        List<String> family = Arrays.asList("saleh", "hadeel", "omar", "adam", "ryan");
+        family.stream().filter(n -> n.startsWith("s") || n.startsWith("h")).map( String::toUpperCase).sorted(Comparator.reverseOrder()).forEach(System.out::println);
 
     }
 }

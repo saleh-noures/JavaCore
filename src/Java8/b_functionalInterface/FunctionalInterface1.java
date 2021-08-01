@@ -13,6 +13,8 @@ Examples of functional interfaces : java.lang.Runnable, java.util.concurrent.Cal
 
 Java 8's functional interfaces are Supplier, Consumer, Function, and Predicate Interfaces
 
+functional interfaces are very handy when using Streams API
+
 java.util.function.Supplier is a functional interface. As per the definition of functional interfaces,
 it has one abstract functional method T get().
 

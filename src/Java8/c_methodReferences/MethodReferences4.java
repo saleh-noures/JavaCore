@@ -67,15 +67,15 @@ public class MethodReferences4 {
 				return new Employee(t,u);
 			}
 		};
-		Employee e1 = empFactory1.apply("Saleh", new Double(60000));
+		Employee e1 = empFactory1.apply("Saleh", 60000d);
 
 		System.out.println("===========Using a lambda expression=========");
         BiFunction<String, Double, Employee> empFactory2 = (n,s)-> new Employee(n,s);
-        Employee e2 = empFactory2.apply("Omar", new Double(100000));
+        Employee e2 = empFactory2.apply("Omar", 100000d);
 
 		System.out.println("===========Using Method References================");
 		BiFunction <String, Double, Employee> empFactory3 = Employee::new;
-		Employee e3 = empFactory3.apply("Adam", new Double(100000));
+		Employee e3 = empFactory3.apply("Adam", 100000d);
 
 		/**********************************************************************************************
 		 * 4- If you have a constructor with three or more arguments,  you would have to create your own functional interface.

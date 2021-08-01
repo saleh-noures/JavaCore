@@ -32,8 +32,9 @@ import java.util.stream.Collectors;
 * Operations (intermediate/terminal)
 * 1-filter(intermediate): used to eliminate elements based on a criteria by executing the "test" method of the "Predicate" interface
 * 2-map(intermediate): lets you convert an object to something else or used to map each element to its corresponding result by executing the "apply" method of the "Function" interface
-* 3-forEach(terminal): Iterate each element of the stream and execute the "accept" method of the "Consumer" interface
-* 4-collect(terminal): Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a List, Set or Map.
+* 3-sorted(intermediate): sorts streams elements
+* 4-forEach(terminal): Iterate each element of the stream and execute the "accept" method of the "Consumer" interface
+* 5-collect(terminal): Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a List, Set or Map.
 *            Collect accepts a Collector which consists of four different operations: a supplier, an accumulator, a combiner and a finisher.
 *            More Details, read here http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
 * 5-min, max, sum, count(terminal): return min, max, sum and count
@@ -81,7 +82,6 @@ public class Streams1 {
 		    e.setName(p.getName());
 		    e.setAddress(p.getAddress());
 		    e.setSalary(10000);
-
 			return e;
 		}).collect(Collectors.toList());
 

@@ -30,7 +30,7 @@ public class Streams2 {
 
         System.out.println("*************Sorted() ***************");
         System.out.println("-------------Sorted List-------------");
-        List<Student> studentList = Arrays.asList(new Student(2, "Omar", 5), new Student(1, "Saleh", 38), new Student(3, "Adam", 1));
+        List<Student> studentList = Arrays.asList(new Student(2, "Omar", 8), new Student(1, "Saleh", 41), new Student(3, "Adam", 3));
 
         System.out.println("-----Example1: Sorting the elements of stream using natural ordering. The element class must implement Comparable interface-----");
         List<Student> sortedStudentList1 = studentList.stream().sorted().collect(Collectors.toList());
