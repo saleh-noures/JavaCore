@@ -64,7 +64,7 @@ class Racer implements Runnable {
     private boolean isRaceWon(int totalDistanceCovered)
 		{
 			boolean isRaceWon = false;
-			if((totalDistanceCovered==1000) && (winner==null ))
+			if((totalDistanceCovered == 1000) && (winner == null ))
 			{
 				String winnerName = Thread.currentThread().getName();
 				winner = winnerName;
