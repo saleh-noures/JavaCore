@@ -39,7 +39,7 @@ class PassengerThread extends Thread{
 /**********************************BusReservation Class************************************/
 class BusReservation implements Runnable{
 
-	private int totalSeatsAvailable=5;
+	private int totalSeatsAvailable = 5;
 
 	public void run() {
 
@@ -58,10 +58,10 @@ class BusReservation implements Runnable{
 
 	  System.out.println("Welcome to HappyBus " + name + " Number of Tickets Available are:"+this.getTotalSeatsAvailable());
 
-		if (seatsNeeded>this.getTotalSeatsAvailable()) {
+		if (seatsNeeded > this.getTotalSeatsAvailable()) {
 			return false;
 		} else {
-			totalSeatsAvailable = totalSeatsAvailable-seatsNeeded;
+			totalSeatsAvailable = totalSeatsAvailable - seatsNeeded;
 			return true;
 		}
 	}

@@ -1,10 +1,9 @@
 package Collection;
 
-public class Box<S  extends Comparable<S>, T> implements Comparable<Box<S,T>> {  //A Generic Types (classes & interfaces)
+public class Box<S  extends Comparable<S>, T> implements Comparable<Box<S,T>> {  //Generic Types (classes & interfaces)
 
 	private S Index;
 	private T desc;
-
 
 
 	public S getIndex() {

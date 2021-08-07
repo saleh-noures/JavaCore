@@ -29,7 +29,6 @@ public class mainClass_List {
 		System.out.println("\nReversing the Order Using Collection class Reverse Static Method");
 		Collections.reverse(boxList);
 		printList(boxList);
-
 		/*************************Sorting the list after removing nulls Using Collection class sort Static Method*********************************************/
 		System.out.println("\nSorting the list after removing nulls Using Collection class sort Static Method");
 		// First you need to remove null objects form the list in order not to throw null pointer exception 

@@ -1,5 +1,7 @@
 package HackerRank;
 
+import java.util.Arrays;
+
 // Note: you need to reverse the array and if negative should be positive and vis versa, you can't define new arrays
 public class HR3_SwapPalces 
 {
@@ -26,8 +28,6 @@ public class HR3_SwapPalces
 			arr[(arr.length/2)] = arr[(arr.length/2)] * -1;
 		}
 
-		for (int ele : arr) {
-			System.out.print(ele + " ");
-		}
+		Arrays.stream(arr).forEach((i)-> System.out.print(i + " "));
 	}
 }

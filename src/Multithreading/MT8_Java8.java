@@ -25,7 +25,7 @@ public class MT8_Java8 {
 	 {
 		/* 
 		   This include (1)reading the counter value (2)adding one to it (3)storing the new value of counter 
-		   so it is likely the the first thread entered the block to be stopped by the CPU while it is in 
+		   so it is likely that the first thread entered the block to be stopped by the CPU while it is in
 		   the first step (reading the value) then second thread enters and reads the same value!
 		 */ 
 		 return counter++;
