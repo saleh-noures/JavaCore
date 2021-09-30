@@ -9,25 +9,25 @@ import java.util.Scanner;
 public class HR13_BinaryTreeHeight {
 
     public static int height(Node root) {
+        int h = 0;
+        return getHeight(root,h);
 
-        return traverse(root,0);
     }
 
-    public static int traverse(Node root, int nodeHeight) {
-        int maxHeight = 0;
+    public static int getHeight(Node currentNode, int h){
+        int lh =h,rh = h;
 
-        if(root.left != null){
-            maxHeight = traverse(root.left, nodeHeight + 1);
+        if (currentNode.left != null)
+        {
+            lh =  getHeight(currentNode.left, ++lh);
         }
 
-        if(root.right != null){
-            maxHeight = traverse(root.right, nodeHeight + 1);
+        if (currentNode.right != null)
+        {
+            rh =  getHeight(currentNode.right, ++rh);
         }
-        // when a node has no left or right nodes is means it is a leaf node
-        if (nodeHeight > maxHeight)
-            maxHeight = nodeHeight;
 
-        return maxHeight;
+        return Math.max(lh,rh);
     }
 
 

@@ -1,6 +1,6 @@
 https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree ------------Done
 
-https://www.hackerrank.com/challenges/tree-level-order-traversal
+https://www.hackerrank.com/challenges/tree-level-order-traversal --------------Done
 
 https://www.hackerrank.com/challenges/balanced-brackets ------------------------ Done
 
@@ -9,3 +9,11 @@ https://www.hackerrank.com/challenges/contacts ---------------------------------
 https://www.hackerrank.com/challenges/find-the-running-median
 
 https://www.hackerrank.com/challenges/swap-nodes-algo
+
+https://www.hackerrank.com/challenges/array-pairs/problem
+
+https://www.hackerrank.com/challenges/tree-huffman-decoding/problem
+
+https://www.hackerrank.com/challenges/down-to-zero-ii/problem
+
+https://www.hackerrank.com/challenges/jesse-and-cookies/problem

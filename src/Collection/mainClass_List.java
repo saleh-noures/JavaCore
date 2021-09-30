@@ -39,6 +39,8 @@ public class mainClass_List {
 		//Or using Comparator
 		//Collections.sort(boxList, new BoxComparator<>());
 		printList(boxList);
+
+		listPlay();
 		
 	}
 
@@ -54,6 +56,7 @@ public class mainClass_List {
 		boxList.add(null);
 		boxList.add(new Box<>(5,"Box5"));
 		boxList.add(new Box<>(4,"Box4"));
+		boxList.add(2, new Box<>(7,"Box4"));
 	}
 
 	public static void printList(List<Box<Integer,String>> boxList)
@@ -62,6 +65,32 @@ public class mainClass_List {
 		{
 			System.out.println(b);
 		}
+	}
+
+	public static void listPlay(){
+
+		int num1 = 9;
+		List<Integer> list = new ArrayList<>();
+		list.add(3);
+		list.add(7);
+		list.add(11);
+		list.add(18);
+
+		list.add(0,1);
+		list.add(list.size(),25);
+
+		for (int i = 0; i < list.size() ; i++) {
+			if (num1 >= list.get(i) && num1< list.get(i+1) )
+			{
+				list.add( i+1 ,num1);
+				break;
+			}
+		}
+
+		int num2 = list.remove(list.size() - 2);
+
+		System.out.println("Printing form Play List:");
+		list.stream().forEach(item -> System.out.print(item + " "));
 	}
 
 }

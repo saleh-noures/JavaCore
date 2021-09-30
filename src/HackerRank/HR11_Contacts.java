@@ -24,90 +24,67 @@ My rank after solving the challenge is 387078
 
 public class HR11_Contacts {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
 
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("c://saleh//HR"));
+        int n = 0;
+        List<List<String>> queriesList = new ArrayList<>();
+        List<String> queryEntry = new ArrayList<>();
+        String query;
+        List<Integer> res = new ArrayList<>();
 
-        int queriesRows = Integer.parseInt(scanner.nextLine().trim());
 
-        String[][] queries = new String[queriesRows][2];
+        Scanner  in = new Scanner(System.in).useDelimiter("\n");;
+        n = in.nextInt();
 
-        for (int queriesRowItr = 0; queriesRowItr < queriesRows; queriesRowItr++) {
-            String[] queriesRowItems = scanner.nextLine().split(" ");
-
-            for (int queriesColumnItr = 0; queriesColumnItr < 2; queriesColumnItr++) {
-                String queriesItem = queriesRowItems[queriesColumnItr];
-                queries[queriesRowItr][queriesColumnItr] = queriesItem;
+        for (int i = 0; i < n; i++) {
+            query = in.next();
+            if(query.substring(0,1).equalsIgnoreCase("a"))
+            {
+                queryEntry.add(query.substring(0,3));
+                queryEntry.add(query.substring(4));
+            }else{
+                queryEntry.add(query.substring(0,4));
+                queryEntry.add(query.substring(5));
             }
+            queriesList.add(queryEntry);
+            queryEntry = new ArrayList<>();
         }
-
-        int[] result = contacts(queries);
-
-        for (int resultItr = 0; resultItr < result.length; resultItr++) {
-            bufferedWriter.write(String.valueOf(result[resultItr]));
-
-            if (resultItr != result.length - 1) {
-                bufferedWriter.write("\n");
-            }
-        }
-
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
+        res= contacts(queriesList);
+        res.forEach(i-> System.out.println(i));
     }
 
+    public static List<Integer> contacts(List<List<String>> queries) {
+        List<Integer> results = new ArrayList<>();
+        Map<String,Integer> namesMap = new HashMap<>();
+        String partialStr;
 
-    static int[] contacts(String[][] queries) {
-
-
-        List<Integer> result = new ArrayList<Integer>();
-        Map<String,Integer> patternMap = new HashMap<String,Integer>();
-        String operation = "";
-        String pattern = "";
-        String contact = "";
-        int tmp = 0;
-        Integer patternValue = 0;
-
-
-        for (int i = 0; i < queries.length ; i++) {
-
-            operation = queries[i][0];
-            contact = queries[i][1];
-
+        for (List<String> entry: queries) {
+            String operation = entry.get(0);
+            String name = entry.get(1);
+            Integer recur;
 
             if (operation.equalsIgnoreCase("add"))
             {
-
-                for (int j = 1; j <= contact.length(); j++) {
-                    pattern = contact.substring(0,j);
-                    patternValue = patternMap.get(pattern);
-                    if (patternValue == null)
+                for (int i = 0; i < name.length(); i++) {
+                    partialStr = name.substring(0,i+1);
+                    recur = namesMap.get(partialStr);
+                    if (recur != null)
                     {
-                        patternMap.put(pattern,1);
-                    }
-                    else
-                    {
-                        tmp = patternValue.intValue();
-                        patternMap.remove(pattern);
-                        patternMap.put(pattern,tmp + 1);
+                        namesMap.put(partialStr, ++recur);
+                    } else {
+                        namesMap.put(partialStr,1);
                     }
                 }
-            }
-            else if (operation.equalsIgnoreCase("find"))
+            } else if (operation.equalsIgnoreCase("find"))
             {
-                if (patternMap.get(contact) == null)
-                {
-                    result.add(new Integer(0));
-                }
-                else
-                {
-                    result.add(patternMap.get(contact));
-                }
+                results.add((namesMap.get(name)!=null?namesMap.get(name):0));
+
             }
         }
 
-        return result.stream().mapToInt(i->i).toArray();
 
+        return results;
     }
+
+
 }
