@@ -3,7 +3,7 @@ package HackerRank;
 //https://www.hackerrank.com/challenges/jesse-and-cookies/problem
 //https://www.educative.io/blog/data-structures-stack-queue-java-tutorial
 
-//Time limit exceeded. Got 20 points form this challenge. Another solution could be be
+//Time limit exceeded. Got 20 points form this challenge.
 
 import java.util.*;
 

@@ -85,6 +85,5 @@ public class Node {
         if (right != null) {
             right.printInOrder();
         }
-
     }
 }

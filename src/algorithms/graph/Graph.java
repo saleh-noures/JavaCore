@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-
+// both BFS and DFS
 public class Graph {
 
     public Node rootNode;

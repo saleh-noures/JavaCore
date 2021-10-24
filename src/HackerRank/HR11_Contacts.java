@@ -15,7 +15,7 @@ any problem, For example, form this challenge constraints we can work out to imp
 */
 
 /*
-This solution uses Tree data structure:
+This solution uses Trie Data Structure (Prefix Tree):
 https://github.com/RodneyShag/HackerRank_solutions/blob/master/Data%20Structures/Trie/Contacts/Solution.java
 My rank after solving the challenge is 387078
 */
