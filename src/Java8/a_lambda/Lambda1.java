@@ -19,6 +19,7 @@ package Java8.a_lambda;
  */
 
 /*https://www.youtube.com/watch?v=q5i_O4Uj_O8*/
+/*https://stackoverflow.com/questions/30026824/modifying-local-variable-from-inside-lambda*/
 
 @FunctionalInterface
 interface Executable
@@ -65,6 +66,7 @@ public class Lambda1
         	              System.out.println("Execute method is running by Java 8 syntax / Lambda expression Line1");
                           System.out.println("Execute method is running by Java 8 syntax / Lambda expression Line2");
         	              });
-        
+
+
     }
 }

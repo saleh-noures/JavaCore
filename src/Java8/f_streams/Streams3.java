@@ -125,7 +125,7 @@ public class Streams3 {
 
         System.out.println("-----------------First-----------------");
         System.out.println("-------------parallel Stream---------------------");
-        Arrays.asList("a1", "a2", "b1", "c2", "c1")
+        Arrays.asList("a", "b", "c", "d", "e")
                 .parallelStream()
                 .filter(s -> {
                     System.out.format("filter: %s [%s]\n", s, Thread.currentThread().getName());
@@ -139,7 +139,7 @@ public class Streams3 {
 
         System.out.println("-----------------Second-----------------");
         System.out.println("-----------sequential Stream---------------------");
-        Arrays.asList("a1", "a2", "b1", "c2", "c1")
+        Arrays.asList("a", "b", "c", "d", "e")
                 .stream()
                 .filter(s -> {
                     System.out.format("filter: %s [%s]\n", s, Thread.currentThread().getName());

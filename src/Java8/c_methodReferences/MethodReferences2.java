@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @FunctionalInterface
-interface NamesOperationsExecutable {
-    List<String> execute(List<String> list);
+interface NamesOperationsExecutable<T> {
+    List<T> execute(List<T> list);
 }
 
 /*Reference to an instance method of a particular object*/
@@ -17,7 +17,7 @@ public class MethodReferences2 {
         NamesOperations namesOperations = new NamesOperations();
 
         System.out.println("===========Using Anynomous Inner Class=========");
-        namesOperations.print(namesList, new NamesOperationsExecutable() {
+        namesOperations.print(namesList, new NamesOperationsExecutable<String>()  {
             @Override
             public List<String> execute(List<String> list) {
                 return namesOperations.toLowerCaseText(list);

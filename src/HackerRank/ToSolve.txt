@@ -16,4 +16,30 @@ https://www.hackerrank.com/challenges/tree-huffman-decoding/problem
 
 https://www.hackerrank.com/challenges/down-to-zero-ii/problem
 
-https://www.hackerrank.com/challenges/jesse-and-cookies/problem
+https://www.hackerrank.com/challenges/jesse-and-cookies/problem  --- Done
+
+https://www.hackerrank.com/challenges/castle-on-the-grid/problem
+------------------------------------------------------------
+https://www.hackerrank.com/challenges/kangaroo/problem ------------------- Done
+
+https://www.hackerrank.com/challenges/birthday-cake-candles/problem ------ Done
+
+https://www.hackerrank.com/challenges/apple-and-orange/problem ----------Done
+
+https://www.hackerrank.com/challenges/between-two-sets/problem  ----- Done
+
+https://www.hackerrank.com/challenges/day-of-the-programmer/problem --- Done
+
+https://www.hackerrank.com/challenges/electronics-shop/problem --- Done
+
+https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem --- Done
+
+https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem --- Done
+
+https://www.hackerrank.com/challenges/non-divisible-subset/problem --- Done
+
+https://www.hackerrank.com/challenges/magic-square-forming/problem --- Done
+
+https://www.hackerrank.com/challenges/counting-valleys/problem?isFullScreen=true --- Done
+
+https://www.hackerrank.com/challenges/the-grid-search/problem?isFullScreen=false --- Done

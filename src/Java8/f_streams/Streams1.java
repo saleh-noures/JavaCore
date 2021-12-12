@@ -37,8 +37,8 @@ import java.util.stream.Collectors;
 * 5-collect(terminal): Collect is an extremely useful terminal operation to transform the elements of the stream into a different kind of result, e.g. a List, Set or Map.
 *            Collect accepts a Collector which consists of four different operations: a supplier, an accumulator, a combiner and a finisher.
 *            More Details, read here http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
-* 5-min, max, sum, count(terminal): return min, max, sum and count
-*
+* 6-min, max, sum, count(terminal): return min, max, sum and count
+* 7-toArray(terminal): turns an array containing the elements of this stream
 *https://www.leveluplunch.com/java/examples/stream-terminal-operations-example/
 *https://www.leveluplunch.com/java/examples/stream-intermediate-operations-example/
 */
@@ -53,8 +53,8 @@ public class Streams1 {
 
 		/****************stream().filter(Predicate predicate)******************/
 
-		Long count = stringList.stream().filter(string -> string.isEmpty()).count();
-		System.out.println("The number of empty elements is: "+ count.longValue());
+		Long count = stringList.stream().filter(String::isEmpty).count();
+		System.out.println("The number of empty elements is: "+ count);
 
 		List<String> nonEmptyStringList = stringList.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
 		System.out.println("Non Empty String List: " + nonEmptyStringList);
@@ -67,7 +67,7 @@ public class Streams1 {
 		List<String> mapToUpper = stringList.stream().map(String::toUpperCase).collect(Collectors.toList());
 		System.out.println("mapToUpper: "+ mapToUpper);
 
-		List<Integer> mapSquareIntegers = integerList.stream().map((x)->x*x).collect(Collectors.toList());
+		List<Integer> mapSquareIntegers = integerList.stream().map(x->x*x).collect(Collectors.toList());
 		System.out.println(mapSquareIntegers);
 
 		List<Person> peopleList = Arrays.asList(new Person("Saleh", 38, "Seven Hills"), new Person("Omar", 5, "Bondi"), new Person("Adam", 1, "New Town"));
