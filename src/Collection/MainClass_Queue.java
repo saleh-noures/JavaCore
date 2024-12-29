@@ -28,6 +28,9 @@ public class MainClass_Queue {
 		System.out.println("Printing boxQueue after removing two Elements .....");
 		printQueue(boxQueue);
 
+		//"peek" Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+		System.out.println("Peek: " + boxQueue.peek());
+
 	}
 	
 	public static void populateQueue(Queue<Box<Integer,String>> boxQueue)

@@ -1,10 +1,7 @@
 package Collection;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
+
 public class mainClass_Set {
 
 	/**
@@ -54,6 +51,7 @@ public class mainClass_Set {
 
 		System.out.println("\nCheck containsAll (uses equal & hashCode methods): " + boxLinkedHashSet.containsAll(boxHashSet));
 		System.out.println("Check contains (uses equal & hashCode methods): " + boxHashSet.contains(new Box<>(1,"Box1")));
+		System.out.println(Collections.max(boxTreeSetUsingComparable));
 	}
 
 	public static void populateSet(Set<Box<Integer,String>> boxSet)
