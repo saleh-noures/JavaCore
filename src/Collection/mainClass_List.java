@@ -22,7 +22,7 @@ public class mainClass_List {
 		List<Box<Integer,String>> boxList =  new ArrayList<>();
 		System.out.println("Populating (2,Box2)(1,Box1)(3,Box3)(3,Box3) null null (5,Box5)(4,Box4)  .....");
 		populateList(boxList);
-		System.out.println("Printing boxHashSet .....");
+		System.out.println("Printing boxList .....");
 		printList(boxList);
 		
 		/*************************Reversing the Order Using Collection class Reverse Static Method*********************************************/
