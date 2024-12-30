@@ -38,7 +38,7 @@ public class MethodReferences1 {
 	{
 		List<Integer> list = Arrays.asList(42,12,5,45,18, 41); // This is Auto-boxing int to Integer
 
-		System.out.println("===========Using Anynomous Inner Class=========");
+		System.out.println("===========Using Anonymous Inner Class=========");
 		// Using an anonymous class
 		List<Integer> list1 = Numbers.findNumbers(list, new BiPredicate<Integer, Integer>() {
 		  public boolean test(Integer i1, Integer i2) {
@@ -46,11 +46,13 @@ public class MethodReferences1 {
 		  }
 		});
 		System.out.println(list1);
-		System.out.println("===========Using Lambda=========");
+
+		System.out.println("===========Using Lambda========================");
 		// Using a lambda expression
 		List<Integer> list2 = Numbers.findNumbers(list, (i1, i2) -> Numbers.isMoreThanFifty(i1, i2));
 		System.out.println(list2);
-		System.out.println("===========Using Method References================");
+
+		System.out.println("===========Using Method References==============");
 		// Using a method reference
 		// Arguments will be passed automatically from
 		List<Integer> list3 = Numbers.findNumbers(list, Numbers::isMoreThanFifty);

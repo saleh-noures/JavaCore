@@ -23,7 +23,7 @@ public class MethodReferences3 {
 
         Sum sum = new Sum();
 
-        System.out.println("===========Using Anynomous Inner Class=========");
+        System.out.println("===========Using Anonymous Inner Class=========");
         TriFunction<Sum, String, String, Integer> triFunction1 = new TriFunction<Sum, String, String, Integer>() {
             public Integer apply(Sum s, String u, String v) {
                 return s.doSum(u, v);

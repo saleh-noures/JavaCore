@@ -24,7 +24,7 @@ public class FunctionalInterface3 {
         ConsumerImpl cons0 = new ConsumerImpl();
         peopleList.forEach(cons0);
 
-        System.out.println("===========Using Anynomous Inner Class=========");
+        System.out.println("===========Using Anonymous Inner Class=========");
         Consumer<Person> cons1 = new Consumer<Person>() {
             @Override
             public void accept(Person p) {

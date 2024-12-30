@@ -24,7 +24,7 @@ public class MethodReferences4 {
 		/**********************************************************************************************
 		 * 1-If the constructor takes no arguments, a Supplier will do the job:
 		 **********************************************************************************************/
-		System.out.println("===========Using Anynomous Inner Class=========");
+		System.out.println("===========Using Anonymous Inner Class=========");
 		Supplier<List<String>> supplier1 = new Supplier<List<String>>() {
 		  public List<String> get() {
 		    return new ArrayList<String>();
@@ -61,7 +61,7 @@ public class MethodReferences4 {
 		/**********************************************************************************************
 		 * 3-If the constructor takes two arguments, we use the BiFunction interface:
 		 **********************************************************************************************/
-		System.out.println("===========Using Anynomous Inner Class=========");
+		System.out.println("===========Using Anonymous Inner Class=========");
 		BiFunction<String ,Double, Employee> empFactory1 = new BiFunction<String ,Double, Employee>(){
 			public Employee apply(String t, Double u) {
 				return new Employee(t,u);

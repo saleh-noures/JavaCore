@@ -34,13 +34,13 @@ public class FunctionalInterface2 {
 	{
 
 		 Consumer < String > consumer1 = (x) -> {
-	                                                System.out.println(x + "OK");
+	                                                System.out.println(x + "Con1");
 	                                            };
 
 	     consumer1.accept("TestConsumerAccept - ");
 
 	     Consumer < String > consumer2 = (y) -> {
-	                                                System.out.println(y + "OK!!!");
+	                                                System.out.println(y + "Con2");
 	                                            };
 
 	     consumer1.andThen(consumer2).andThen(consumer1).accept("TestConsumerAfterThen - ");

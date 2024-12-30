@@ -27,12 +27,12 @@ public class Lambda3 {
       *2-To pass more than one parameter you can do this (a,b)
       *3-It is important to note that in some cases you need to explicitly
       *  mention the type to avoid method call ambiguity.
-      *4-Lambda does not have its own scope but it uses the same scope of the method
-      *  where it's declared. Other words if you declare a variable in lambda expression
-      *  with the same name as another variable in the method where a the lambda is declared
+      *4-Lambda does not have its own scope, but it uses the same scope of the method
+      *  where it's declared. Other words, if you declare a variable in lambda expression
+      *  with the same name as another variable in the method where the lambda is declared
       *  that will be a syntax error. try!
       *5-You can use a variable form outside lambda only if it's final or effectively final,
-      *  meaning you can declare the variable without using a final keyword
+      *  meaning you can declare the variable without using a final keyword,
       *  but you can't change it later */
 
     	int x = 10;

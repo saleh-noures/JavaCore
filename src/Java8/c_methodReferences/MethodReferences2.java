@@ -16,7 +16,7 @@ public class MethodReferences2 {
         List<String> namesList = Arrays.asList("Saleh", "Omar", "Adam");
         NamesOperations namesOperations = new NamesOperations();
 
-        System.out.println("===========Using Anynomous Inner Class=========");
+        System.out.println("===========Using Anonymous Inner Class=========");
         namesOperations.print(namesList, new NamesOperationsExecutable<String>()  {
             @Override
             public List<String> execute(List<String> list) {
