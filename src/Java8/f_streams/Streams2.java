@@ -81,19 +81,19 @@ public class Streams2 {
 }
 
 class Student implements Comparable<Student> {
-    private int Id;
+    private int id;
     private String name;
     private int age;
 
     public Student(int id, String name, int age) {
         super();
-        Id = id;
+        this.id = id;
         this.name = name;
         this.age = age;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public String getName() {
