@@ -7,7 +7,7 @@ package Multithreading; /*
   * For more details see here : http://java9s.com/core-java/thread-safety-and-code-synchronization-in-java
  */
 
-/**********************************HappyBus Class*******************************************/
+/********************************** HappyBus Class *******************************************/
 public class MT3_HappyBusWithSynch {
 
 	public static void main(String[] args)
@@ -21,7 +21,7 @@ public class MT3_HappyBusWithSynch {
 	}
 }
 
-/**********************************PassengerThread Class************************************/
+/********************************** PassengerThread Class ************************************/
 class PassengerThread extends Thread{
 
 	private int seatsNeeded;
@@ -36,7 +36,7 @@ class PassengerThread extends Thread{
 	}
 }
 
-/**********************************BusReservation Class************************************/
+/********************************** BusReservation Class ************************************/
 class BusReservation implements Runnable{
 
 	private int totalSeatsAvailable = 5;
@@ -45,7 +45,7 @@ class BusReservation implements Runnable{
 
 		PassengerThread pt = (PassengerThread) Thread.currentThread();
 
-		boolean ticketsBooked = this.bookTickets(pt.getSeatsNeeded(), pt.getName());
+		boolean ticketsBooked = bookTickets(pt.getSeatsNeeded(), pt.getName());
 
 		if(ticketsBooked){
 			System.out.println("CONGRATS "+Thread.currentThread().getName() + " .. The number of seats requested(" + pt.getSeatsNeeded() + ")  are BOOKED");
@@ -54,11 +54,11 @@ class BusReservation implements Runnable{
 		}
 	}
 
-  public synchronized boolean bookTickets(int seatsNeeded,String name){
+  public  boolean bookTickets(int seatsNeeded,String name){
 
-	  System.out.println("Welcome to HappyBus " + name + " Number of Tickets Available are:"+this.getTotalSeatsAvailable());
+	  System.out.println("Welcome to HappyBus " + name + " Number of Tickets Available are:"+ getTotalSeatsAvailable());
 
-		if (seatsNeeded > this.getTotalSeatsAvailable()) {
+		if (seatsNeeded > getTotalSeatsAvailable()) {
 			return false;
 		} else {
 			totalSeatsAvailable = totalSeatsAvailable - seatsNeeded;

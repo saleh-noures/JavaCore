@@ -3,7 +3,7 @@ package Multithreading;
  * 1- Join is used in the situations when a task which should be completed before the current task is going to finish.
  * 2- Join method belongs to Thread object and not a static member. When join is invoked on a thread instance, this thread
  *    will tell currently executing thread to wait till the Joining thread completes.
- * 3- Just to give another example of how Join works, say we have a slow train on the track moving and another
+ * 3- Just to give an example of how Join works, say we have a slow train on the track moving and another
  *    fast train should take the same track, so, we make way to the fast train and tell the slow train to join once after the fast one is left.
 */
 

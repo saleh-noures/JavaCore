@@ -36,7 +36,7 @@ class Racer2 implements Runnable {
 
 				System.out.println("Distance Covered by "+Thread.currentThread().getName()+ " is: "+distance +"meters");
 
-				//Check if race is complete if some one has already won
+				//Check if race is complete in case someone has already won
 				if (winner == null )
 				{
 					isRaceWon(distance);

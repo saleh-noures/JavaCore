@@ -1,13 +1,13 @@
 package Multithreading;/*
 Priorities
 1-Priorities can be specified from 1 to 10. 10 being the highest, 1 being the lowest priority and 5 being the default priority
-2-Remember that the thread with highest priority will be given preference in execution. But there is no guarantee that it will be in running state the moment it starts.
+2-Remember that the thread with the highest priority will be given preference in execution. But there is no guarantee that it will be in running state the moment it starts.
 3-The currently executing thread might have the higher priority when compared to the threads in the pool who are waiting for their chance.
 4-Remember that the priorities should be set before the threads start method is invoked.
 
 Yield
 1-Yield tells the currently executing thread to give a chance to the threads that have equal priority in the Thread Pool.
-2-There is no guarantee that Yield will make the currently executing thread to runnable state immediately.
+2-There is no guarantee that Yield will make the currently executing thread go to runnable state immediately.
 3-Remember an important point that yield method does not make the thread to go to Wait or Blocked state. It can only make a thread from Running State to Runnable State.
 */
 
@@ -76,7 +76,7 @@ public class MT4_PriorityYieldDemo {
             System.out.println(System.nanoTime() + " t8 Status:" + t8State);
             System.out.println(System.nanoTime() + " t9 Status:" + t9State);
 
-        }while (allThreads.activeCount()>0);
+        } while (allThreads.activeCount()>0);
 
     }
 

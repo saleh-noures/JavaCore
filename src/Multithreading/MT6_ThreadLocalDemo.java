@@ -13,7 +13,7 @@ package Multithreading;/*
 
 /*     Case Study
  *  We can point out one use case where I used thread local. Consider you have a Servlet which calls some business methods. You have a requirement to generate a unique transaction id
- *  for each and every request this servlet process and you need to pass this transaction id to the business methods, for logging purpose.
+ *  for each and every request this servlet process, and you need to pass this transaction id to the business methods, for logging purpose.
  *  One solution would be passing this transaction id as a parameter to all the business methods. But this is not a good solution as the code is redundant and unnecessary.
  *  To solve that, you can use Thread Local. You can generate a transaction id (either in the servlet or better still in a filter) and set it in the Thread Local.
  *  After this, what ever the business method, that this servlet calls, can access the transaction id from the thread local.
