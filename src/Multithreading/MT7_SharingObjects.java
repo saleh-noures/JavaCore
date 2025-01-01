@@ -47,6 +47,7 @@ class C implements Runnable {
     A a ;
     public void run() {
     a= new A();
+    a.count();
         System.out.println("Counter From " + Thread.currentThread().getName() + ": " + a.getCounter());
     }
 }

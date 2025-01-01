@@ -54,7 +54,7 @@ class BusReservation implements Runnable{
 		}
 	}
 
-  public  boolean bookTickets(int seatsNeeded,String name){
+  public synchronized boolean bookTickets(int seatsNeeded,String name){
 
 	  System.out.println("Welcome to HappyBus " + name + " Number of Tickets Available are:"+ getTotalSeatsAvailable());
 
