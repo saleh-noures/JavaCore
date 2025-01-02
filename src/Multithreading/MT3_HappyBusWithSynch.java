@@ -48,9 +48,9 @@ class BusReservation implements Runnable{
 		boolean ticketsBooked = bookTickets(pt.getSeatsNeeded(), pt.getName());
 
 		if(ticketsBooked){
-			System.out.println("CONGRATS "+Thread.currentThread().getName() + " .. The number of seats requested(" + pt.getSeatsNeeded() + ")  are BOOKED");
+			System.out.println("CONGRATS "+ pt.getName() + " .. The number of seats requested(" + pt.getSeatsNeeded() + ")  are BOOKED");
 		}else{
-			System.out.println("Sorry "+Thread.currentThread().getName()+ " .. The number of seats requested(" + pt.getSeatsNeeded() + ")  are not available");
+			System.out.println("Sorry " + pt.getName() + " .. The number of seats requested(" + pt.getSeatsNeeded() + ")  are not available");
 		}
 	}
 
