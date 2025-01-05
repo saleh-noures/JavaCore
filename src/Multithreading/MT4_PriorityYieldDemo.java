@@ -31,6 +31,8 @@ public class MT4_PriorityYieldDemo {
         Thread t8 = new Thread(allThreads, yr, "t8");
         Thread t9 = new Thread(allThreads, yr, "t9");
 
+        //This is setting the static Priority. The system decides on the Dynamic priority -> Dynamic priority = static Priority + bonus.
+        //The decision on how to allocate the time for each thread is based on a dynamic priority.
         t1.setPriority(Thread.MAX_PRIORITY);
         t2.setPriority(Thread.MAX_PRIORITY);
         t3.setPriority(Thread.MAX_PRIORITY);

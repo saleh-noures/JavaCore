@@ -18,6 +18,31 @@ package Multithreading;
  * 		Callable has call method which returns value but Runnable has run method which doesn't return any value.
  * 		call method can throw checked exception but run method can't throw checked exception.
  * 		Callable use submit() method to put in task queue but Runnable use execute() method to put in the task queue.
+ * 10- Threads can execute same target (Runnable Object) or different targets (Runnable Objects)
+ * 11- There are two ways to create threads execute run method:
+ *     1- This method is used if you want to re-use the same runnable object across different threads
+ *        you implement the runnable interface and pass an object of that class into a newly created thread object
+ *        Thread Thread = new Thread(Runnable runnable);
+ *        Thread.start();
+ *     2- Thread class implements Runnable interface so easily implement the run:
+ *        class MyThread extends Thread {
+ *        ...
+ *        @Override
+ *         public void run() { ...}
+ *         }
+ *         ...
+ *         MyThread myThread = new MyThread();
+ *         myThread.start();
+ * 11- Some Thread methods
+ *     1- Thread Object methods:
+ *        - threadObj.setName();
+ *        - threadObj.setUncaughtExceptionHandler();  --> used to log additional data or clean up resources
+ *        - threadObj.start();
+ *        - threadObj.join();
+ *        -threadObj.interrupt();
+ *     2- Thread Static Methods
+ *        - Thread.sleep();
+ *        - Thread.yield();
  */
 // **************This example execute two threads form the same class*************
 public class MT1_RaceDemo
