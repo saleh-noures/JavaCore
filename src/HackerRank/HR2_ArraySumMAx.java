@@ -12,7 +12,7 @@ public class HR2_ArraySumMAx {
 
 		for (int i = 0 ; i <= arr.length - pSize ; i++)
 		{
-			for (int j = i ; j<i+pSize ; j++)
+			for (int j = i ; j < i + pSize ; j++)
 			{
 				sum = sum + arr[j];
 			}
