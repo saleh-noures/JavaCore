@@ -54,7 +54,7 @@ public class L3_ThreadsCreationPart2_Inheritance {
         @Override
         public void start() {
             //Not that We are using this.getName() instead of Thread.currentThread().getName() because we overrode
-            // the run method from the Thread class and not using Thread Thread = new Thread(Runnable runnable);
+            // the run method from the Thread class and not using Thread = new Thread(Runnable runnable);
             System.out.println("Starting thread " + this.getName());
             super.start();
         }

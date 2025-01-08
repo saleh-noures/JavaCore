@@ -6,28 +6,24 @@ import java.util.Arrays;
 public class HR3_SwapPalces 
 {
 
-	public static void main(String[] args)
-	{
-		int [] arr = {2,-3,7,8,-9,4,1};
+	public static void main(String[] args) {
+		int[] arr = {2, -3, 7, 8, -9, 4, 1};
 		int tmp = 0;
 
 
-		boolean isOddArr = arr.length%2 > 0 ? true : false;
+		int left = 0, right = arr.length - 1;
 
-		for (int i = 0; i < arr.length/2; i++) {
+		while (left <= right) {
+			// Swap and invert the signs of both ends
+			int temp = -arr[left];
+			arr[left] = -arr[right];
+			arr[right] = temp;
 
-			tmp = arr[i];
-
-			arr[i] = arr[arr.length -1 -i] * -1;
-
-			arr[arr.length -1 -i] = tmp * -1;
-
+			// Move pointers towards the center
+			left++;
+			right--;
 		}
 
-		if (isOddArr){
-			arr[(arr.length/2)] = arr[(arr.length/2)] * -1;
-		}
-
-		Arrays.stream(arr).forEach((i)-> System.out.print(i + " "));
+		Arrays.stream(arr).forEach((i) -> System.out.print(i + " "));
 	}
 }

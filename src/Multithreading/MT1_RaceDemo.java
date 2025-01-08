@@ -39,10 +39,13 @@ package Multithreading;
  *        - threadObj.setUncaughtExceptionHandler();  --> used to log additional data or clean up resources
  *        - threadObj.start();
  *        - threadObj.join();
- *        -threadObj.interrupt();
+ *        - threadObj.interrupt();
+ *        - threadObj.setDaemon(true);
  *     2- Thread Static Methods
  *        - Thread.sleep();
  *        - Thread.yield();
+ *        - Thread.currentThread().isInterrupted()
+ *        - Thread.currentThread().getName()
  */
 // **************This example execute two threads form the same class*************
 public class MT1_RaceDemo
