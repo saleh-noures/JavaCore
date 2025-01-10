@@ -1,5 +1,6 @@
 package HackerRank;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class HR7_BeautifulTriplets_Implementation_Easy {
@@ -24,7 +25,26 @@ public class HR7_BeautifulTriplets_Implementation_Easy {
         in.close();
     }
 
+
     static int beautifulTriplets(int d, int[] arr) {
+        int count = 0;
+        HashSet<Integer> values = new HashSet<>();
+
+        for (int num : arr) {
+            values.add(num);
+        }
+
+        for (int num : arr) {
+            if (values.contains(num + d) && values.contains(num + 2 * d)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
+    static int beautifulTripletsBruteForce (int d, int[] arr) {
         int beautifulTripletsCount = 0;
         for (int i = 0; i < arr.length - 2 ; i++) {
             for (int j = i+1; j < arr.length -1; j++) {
